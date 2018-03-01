@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link type="text/css" rel="stylesheet" href="{{ asset('css/login.css') }}">
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="row justify-content-center">
+            <div id="loginContainer" class="col-sm-12">
+
+                <div class="text-center">
+                    <img id="logoImg" src="{{ asset('img/psa_logo.png') }}" class="img-fluid" alt="Responsive image">
+                </div>
+                {{ form_start(form) }}
+                    <div class="form-group">
+                        <div class="input-group addon" id="uidGroup">
+                            <span class="input-group-addon" id="basic-addon1" style="margin-right: 1px;"><i class="fa fa-user"></i></span>
+                            {{ form_widget(form._username, {
+                                'attr': {
+                                    'id': 'uidInput',
+                                    'class' : 'form-control',
+                                    'style': 'text-transform: uppercase;',
+                                    'aria-describedby': 'basic-addon1',
+                                    'placeholder': 'Uxxxxxx'
+                                }
+                            }) }}
+                            {#<input type="text" class="form-control" id="uidInput" aria-describedby="basic-addon1" placeholder="Uxxxxxx">#}
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="input-group addon" id="pwdGroup">
+                            <span class="input-group-addon" id="basic-addon2"><i class="fas fa-lock-open"></i></span>
+                            {{ form_widget(form._password, {
+                                'attr': {
+                                    'id': 'pwdInput',
+                                    'class' : 'form-control',
+                                    'aria-describedby': 'basic-addon2'
+                                }
+                            }) }}
+                            {#<input type="password" class="form-control" id="pwdInput" aria-describedby="basic-addon2">#}
+                        </div>
+                    </div>
+                    <div id="loginBtnDiv" class="text-center">
+                        <button id="loginBtn" class="btn btn-outline-primary btn-block">Login</button>
+                    </div>
+                {{ form_end(form) }}
+            </div>
+        </div>
+    </div>
+{% endblock %}

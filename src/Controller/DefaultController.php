@@ -9,7 +9,7 @@ use Symfony\Component\HttpFoundation\Request;
 class DefaultController extends Controller
 {
     /**
-     * @Route(path="/", name="home_page")
+     * @Route(path="/", name="homepage")
      *
      * @param Request $request
      */

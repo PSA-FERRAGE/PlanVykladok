@@ -1,0 +1,26 @@
+form {
+    margin-top: 10px;
+}
+
+#logoImg {
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+}
+
+#loginContainer {
+    margin-top: 150px;
+    max-width: 300px;
+}
+
+#loginBtnDiv {
+    margin-top: 30px;
+}
+
+.input-group-addon {
+    background-color: transparent;
+    border: none;
+}
+
+.input-group > .form-control:not(:first-child) {
+    border-radius: .25rem;
+}
