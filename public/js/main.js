@@ -18,5 +18,4 @@ $(document).ready(function () {
             $('#sidebarCollapse').attr('aria-expanded', 'true');
         }
     });
-
 });
