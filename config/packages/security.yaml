@@ -21,5 +21,6 @@ security:
             switch_user: ~
 
     access_control:
+        - { path: ^/test, roles: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/, roles: IS_AUTHENTICATED_FULLY }

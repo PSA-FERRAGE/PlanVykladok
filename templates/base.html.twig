@@ -11,6 +11,7 @@
     <link type="text/css" rel="stylesheet" href="{{ asset('vendor/css/fontawesome-all.min.css') }}">
     <link type="text/css" rel="stylesheet" href="{{ asset('vendor/css/jquery.mCustomScrollbar.min.css') }}">
     <link type="text/css" rel="stylesheet" href="{{ asset('vendor/css/bootstrap-select.min.css') }}">
+    <link type="text/css" rel="stylesheet" href="{{ asset('vendor/css/bootstrap-material-datetimepicker.css') }}">
 
     <link type="text/css" rel="stylesheet" href="{{ asset('css/global.css') }}">
     {% block stylesheets %}{% endblock %}
@@ -19,12 +20,21 @@
 {% block body %}{% endblock %}
 
 <script type="text/javascript" src="{{ asset('vendor/js/jquery-3.3.1.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('vendor/js/jquery.mCustomScrollbar.concat.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('vendor/js/moment.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('vendor/js/popper.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('vendor/js/jquery.mCustomScrollbar.concat.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('vendor/js/bootstrap-material-design.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('vendor/js/bootstrap-select.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('vendor/js/bootstrap-material-datetimepicker.js') }}"></script>
 
-<script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
+<script>$(document).ready(function () {
+        $('#prichodCas').bootstrapMaterialDatePicker({
+            format: 'DD/MM/YYYY - HH:mm',
+            switchOnClick: true
+        });
+        $('body').bootstrapMaterialDesign();
+    });
+</script>
 {% block javascripts %}{% endblock %}
 </body>
 </html>

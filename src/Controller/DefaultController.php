@@ -16,4 +16,13 @@ class DefaultController extends Controller
     public function indexAction(Request $request) {
         return $this->render('default/default.html.twig');
     }
+
+    /**
+     * @Route(path="/test", name="testpage")
+     *
+     * @param Request $request
+     */
+    public function testAction(Request $request) {
+        return $this->render('default/test.html.twig');
+    }
 }

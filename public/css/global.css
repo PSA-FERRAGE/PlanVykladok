@@ -2,6 +2,8 @@
     /*height: 4.2rem;*/
     left: 250px;
     transition: all 0.3s;
+    box-shadow: none;
+    background-color: #1c355e !important;
 }
 
 #topNav.active {
@@ -70,9 +72,9 @@ a, a:hover, a:focus {
 }
 
 #sidebar .sidebar-header {
-    height: 3.4rem;
+    height: 3.6rem;
     padding-top: 1rem;
-    background: #092042;
+    background: #1c355e;
 }
 
 #sidebar ul.components {
@@ -158,4 +160,25 @@ ul ul a {
     #sidebarCollapse span {
         display: none;
     }
+}
+
+
+.form-control {
+    background-image: linear-gradient(0deg,#092042 2px,rgba(0,150,136,0) 0),linear-gradient(0deg,rgba(0,0,0,.26) 1px,transparent 0) !important;
+}
+
+.btn.btn-outline-primary {
+    color: #1c355e !important;
+    border-color: #1c355e !important;
+}
+
+.btn.btn-outline-primary:hover {
+    color: #fff;
+    background-color: #1c355e;
+    border-color: #1c355e;
+}
+
+.btn.btn-outline-primary:focus, .btn.btn-outline-primary.focus {
+    box-shadow: 0 0 0 0.2rem rgba(28, 53, 94, 0.5);
+    border: none;
 }
